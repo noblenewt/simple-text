@@ -2,8 +2,34 @@
 <html>
  <head>
   <title>notepad</title>
+  <style>
+   .main {
+    font: 2rem/1.5 monospace;
+    background-color:ffffed;
+    max-width:60rem;
+    margin:0 auto;
+    padding:4rem;
+    height: 80%;
+   }
+  </style>
+  <script>
+   var content;
+  
+   function save {
+    content = document.getElementByID("main").innerHTML;
+    localStorage.setItem("content", content);
+   } 
+   
+   function load {
+    document.getElementByID("main").innerHTML = localStorage.getItem("content");
+   }
+  </script>
  </head>
  
- <body contenteditable style="font: 2rem/1.5 monospace;background-color:ffffed;max-width:60rem;margin:0 auto;padding:4rem;">
+ <body onload="load()">
+ <div contenteditable id="main" keyup></div>
+ <div>
+  <img
+ </div>
  </body>
 </html>
