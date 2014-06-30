@@ -15,12 +15,12 @@
   <script>
    var content;
   
-   function save {
+   function save() {
     content = document.getElementByID("main").innerHTML;
     localStorage.setItem("content", content);
    } 
    
-   function load {
+   function load() {
     document.getElementByID("main").innerHTML = localStorage.getItem("content");
    }
   </script>
@@ -29,7 +29,8 @@
  <body onload="load()">
  <div contenteditable id="main" keyup></div>
  <div>
-  <img
+  <h1>Simple Text</h1>
+  <h2><a href="noblenewt.co.uk">by NobleNewt</a></h2>
  </div>
  </body>
 </html>
